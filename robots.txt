@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bowsel.github.io/officialindex-leyu-com-cn-2/sitemap.xml
