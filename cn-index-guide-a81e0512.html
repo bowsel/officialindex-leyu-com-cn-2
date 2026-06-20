@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K1体育 · 运动生活的质感入口</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f7f5f2;
+      color: #1e1e1f;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.2rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #ddd8cf;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 420;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #20201f;
+      margin-bottom: 0.4rem;
+    }
+    .hero .sub {
+      font-size: 1rem;
+      color: #6b655c;
+      border-left: 3px solid #bfa78d;
+      padding-left: 1.2rem;
+      margin-top: 0.6rem;
+    }
+
+    /* 背景说明 */
+    .context {
+      background: #ebe6df;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.8rem;
+      font-size: 0.98rem;
+      color: #2e2b27;
+    }
+    .context strong {
+      font-weight: 500;
+      color: #3a2f26;
+    }
+
+    /* 三段自然介绍 — 卡片式 */
+    .insight-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .insight-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+    .insight-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03), 0 12px 28px rgba(0,0,0,0.04);
+    }
+    .insight-card h2 {
+      font-size: 1.25rem;
+      font-weight: 480;
+      letter-spacing: -0.01em;
+      color: #322f2b;
+      margin-bottom: 0.6rem;
+      border-bottom: 2px solid #e5ddd2;
+      padding-bottom: 0.4rem;
+    }
+    .insight-card p {
+      font-size: 0.97rem;
+      color: #42403c;
+    }
+    .insight-card .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      background: #eae3da;
+      padding: 0.1rem 0.65rem;
+      border-radius: 40px;
+      color: #51473c;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* FAQ 摘要 mini */
+    .faq-mini {
+      margin: 2.2rem 0 3rem;
+    }
+    .faq-mini summary {
+      font-weight: 470;
+      font-size: 1.05rem;
+      cursor: pointer;
+      color: #37322d;
+      padding: 0.5rem 0;
+      border-top: 1px solid #e3dbd0;
+      list-style: none;
+    }
+    .faq-mini summary::-webkit-details-marker { display: none; }
+    .faq-mini details:first-of-type summary { border-top: none; }
+    .faq-mini .answer {
+      font-size: 0.92rem;
+      color: #5b5550;
+      padding: 0.4rem 0 1rem 0.5rem;
+      border-bottom: 1px solid #ede7de;
+    }
+
+    /* 页尾提示 */
+    .footer-note {
+      background: transparent;
+      padding: 1.5rem 0 0.5rem;
+      border-top: 1px solid #d9d2c7;
+      font-size: 0.95rem;
+      color: #48433d;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem 1.2rem;
+    }
+    .footer-note .tagline {
+      max-width: 60%;
+    }
+    .footer-note .ref-link {
+      background: #e3dbd0;
+      border-radius: 60px;
+      padding: 0.4rem 1.4rem;
+      font-size: 0.95rem;
+      color: #24201b;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .footer-note .ref-link:hover {
+      background: #cfc2b2;
+      color: #141210;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 480px) {
+      .page {
+        padding: 1.8rem 1rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 2.0rem;
+      }
+      .context, .insight-card {
+        padding: 1.2rem 1.2rem;
+      }
+      .insight-card {
+        padding: 1.4rem 1.2rem;
+      }
+      .footer-note {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-note .tagline {
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero -->
+    <header class="hero">
+      <h1>K1体育 · 生活即主场</h1>
+      <div class="sub">日常、质感与运动感的交界处</div>
+    </header>
+
+    <!-- 背景说明 -->
+    <section class="context">
+      <strong>关于这个空间</strong> —— 这里并非一个竞技新闻站，也不是运动商城。它更接近一本安静的体育生活方式杂志，为那些把运动当作日常呼吸的人准备。从晨跑路线、居家训练节奏，到周末的户外节奏，<strong>K1体育</strong> 尝试用一种不喧哗的方式，记录和连接身体与城市之间的默契。
+    </section>
+
+    <!-- 三段自然介绍 -->
+    <div class="insight-grid">
+      <div class="insight-card">
+        <span class="tag">节奏</span>
+        <h2>晨间15分钟，也是比赛日</h2>
+        <p>不一定要穿专业压缩衣才叫训练。跟着自然醒的节奏，拉伸、几个自重动作，再喝一杯温水——这本身就是一种高质量的开场。在<a href="https://cn-index-k1sports.com" style="color:#2a4a3f; text-decoration: underline; text-underline-offset: 3px; font-weight: 460;">K1体育</a>的理念里，微汗和小坚持，比一次完美表现更接近运动本质。</p>
+      </div>
+      <div class="insight-card">
+        <span class="tag">场景</span>
+        <h2>城市公园与阳台角落</h2>
+        <p>很多人的运动场不在体育馆，而在楼下绿地、楼顶天台或客厅的一小块空地上。这种非正式感反而让运动变得可持续。你不需要等装备齐全再开始，一双旧跑鞋、一张瑜伽垫，就足够启动。<a href="https://cn-index-k1sports.com" style="color:#2a4a3f; text-decoration: underline; text-underline-offset: 3px;">K1体育</a>常年关注这种低门槛、高融入度的运动方式。</p>
+      </div>
+      <div class="insight-card">
+        <span class="tag">态度</span>
+        <h2>数据之外，感受更重要</h2>
+        <p>心率、配速、消耗数值……科技给了我们很多参考，但运动中最诚实的反馈其实是身体本身的感受——今天动作流畅吗？呼吸顺畅吗？这种内在的对话比任何仪表盘都更细腻。<a href="https://cn-index-k1sports.com" style="color:#2a4a3f; text-decoration: underline; text-underline-offset: 3px;">K1体育</a>欣赏这种回到身体直觉的运动哲学。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 (迷你) -->
+    <div class="faq-mini">
+      <details>
+        <summary>▸ 为什么叫「K1体育」？</summary>
+        <div class="answer">命名灵感来源于“Kinetic One”——动力第一。它代表一种优先级：把身体的原动力放在日常的中心。体育不只是比赛，更是生活的基础频率。</div>
+      </details>
+      <details>
+        <summary>▸ 这里适合完全不运动的人吗？</summary>
+        <div class="answer">更适合那些对运动有好奇心、但还没找到自己节奏的朋友。观点比教程多，氛围比数据重。你可以只浏览，也可以从一句话中获得行动的理由。</div>
+      </details>
+    </div>
+
+    <!-- 页尾访问提示（自然嵌入链接） -->
+    <div class="footer-note">
+      <span class="tagline">如果你对运动中的松弛感与专注力同样着迷，翻翻 <a href="https://cn-index-k1sports.com" style="color:#1f1b17; text-decoration: underline; text-underline-offset: 3px; font-weight: 470;">K1体育</a> 的内容，或许能找到下一段出发的灵感。</span>
+      <a href="https://cn-index-k1sports.com" class="ref-link">K1体育</a>
+    </div>
+
+    <!-- 微小暗纹种子（仅用于变化，不显示） -->
+    <span style="display:none;">ea78db631d2fe561</span>
+
+  </div>
+</body>
+</html>
